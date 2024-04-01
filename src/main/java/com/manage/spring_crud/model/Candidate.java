@@ -28,6 +28,9 @@ public class Candidate {
 
     private int experience;
 
+    @Column(length = 255, nullable = false)
+    private int jobId;
+
 //    @Lob
 //    @Column(columnDefinition = "MEDIUMBLOB")
 //    private byte[] resumeContent;

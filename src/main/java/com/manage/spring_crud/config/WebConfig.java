@@ -11,7 +11,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("https://resource-management-app.vercel.app","http://localhost:4200") // Add your Angular app URL here
+                .allowedOrigins("https://localhost:4200","https://resource-management-app.vercel.app") // Add your Angular app URL here
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowCredentials(true);
     }

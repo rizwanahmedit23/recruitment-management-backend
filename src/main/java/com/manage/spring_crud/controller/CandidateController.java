@@ -18,11 +18,12 @@ public class CandidateController {
     private CandidateService candidateService;
 
     //Add new Candidate
-    @PostMapping("/addCandidate")
-    public Candidate addCandidate(@RequestBody CandidateData candidateData) {
+    @PostMapping("/addCandidate/{jobId}")
+    public Candidate addCandidate(@PathVariable int jobId, @RequestBody CandidateData candidateData) {
         System.out.println("candidate controller add candidates "+ candidateData);
 
         Candidate candidate = new Candidate();
+        candidate.setName(candidateData.getName());
         candidate.setName(candidateData.getName());
         candidate.setEmail(candidateData.getEmail());
         candidate.setMobile(candidateData.getMobile());
