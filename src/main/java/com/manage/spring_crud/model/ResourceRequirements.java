@@ -37,10 +37,10 @@ public class ResourceRequirements {
 
     private String status;
 
-    @OneToMany(
-//            mappedBy = "resourceRequirements",
-            cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-//    @JsonBackReference
-    private List<Candidate> candidates;
+//    @OneToMany(
+////            mappedBy = "resourceRequirements",
+//            cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+////    @JsonBackReference
+//    private List<Candidate> candidates;
 }
 

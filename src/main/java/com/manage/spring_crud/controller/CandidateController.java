@@ -23,6 +23,7 @@ public class CandidateController {
         System.out.println("candidate controller add candidates "+ candidateData);
 
         Candidate candidate = new Candidate();
+        candidate.setJobId(jobId);
         candidate.setName(candidateData.getName());
         candidate.setName(candidateData.getName());
         candidate.setEmail(candidateData.getEmail());
@@ -68,6 +69,11 @@ public class CandidateController {
     public List<Candidate> getAllCandidates() {
         return candidateService.getAllCandidates();
 
+    }
+
+    @GetMapping("/getAllCandidatesByJobId/{jobId}")
+    public List<Candidate> getAllCandidatesByJobId(@PathVariable Long jobId) {
+        return candidateService.getAllCandidatesByJobId(jobId);
     }
 
 }

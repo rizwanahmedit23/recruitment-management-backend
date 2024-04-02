@@ -16,8 +16,8 @@ public class DiscussionDetails {
     private int discussionId;
     private String discussionDate;
     private String discussionNotes;
-
-    @OneToOne
-    private Candidate candidate;
+//
+//    @OneToOne
+//    private Candidate candidate;
 }
 

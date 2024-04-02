@@ -19,6 +19,8 @@ public class InterviewFeedback1 {
     private String positionApplied;
     private String improvementAreas;
 
-    @OneToOne
-    private Candidate candidate;
+    private int candidateId;
+
+//    @OneToOne
+//    private Candidate candidate;
 }

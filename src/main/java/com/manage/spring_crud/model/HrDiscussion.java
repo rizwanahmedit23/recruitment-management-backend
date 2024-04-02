@@ -18,6 +18,8 @@ public class HrDiscussion {
     private String culturalFit;
     private String finalDecision;
 
-    @OneToOne
-    private Candidate candidate;
+    private int candidateId;
+
+//    @OneToOne
+//    private Candidate candidate;
 }

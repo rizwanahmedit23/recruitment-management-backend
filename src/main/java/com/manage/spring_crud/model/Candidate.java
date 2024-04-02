@@ -38,20 +38,20 @@ public class Candidate {
 //    @Column
 //    private String fileExtension;
 
-    @OneToOne(mappedBy = "candidate")
-    private InterviewFeedback1 interviewFeedback1;
-
-    @OneToOne(mappedBy = "candidate")
-    private InterviewFeedback2 interviewFeedback2;
-
-    @OneToOne(mappedBy = "candidate")
-    private HrDiscussion hrDiscussion;
+//    @OneToOne(mappedBy = "candidate")
+//    private InterviewFeedback1 interviewFeedback1;
+//
+//    @OneToOne(mappedBy = "candidate")
+//    private InterviewFeedback2 interviewFeedback2;
+//
+//    @OneToOne(mappedBy = "candidate")
+//    private HrDiscussion hrDiscussion;
 
 //    @ManyToOne
 //    @JoinColumn(name = "resource_requirements_id")
 //    @JsonManagedReference
 //    private ResourceRequirements resourceRequirements;
-
-    @OneToOne(mappedBy = "candidate")
-    private DiscussionDetails discussionDetails;
+//
+//    @OneToOne(mappedBy = "candidate")
+//    private DiscussionDetails discussionDetails;
 }

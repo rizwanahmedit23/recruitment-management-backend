@@ -23,6 +23,8 @@ public class InterviewFeedback2 {
     private String advTechSkills;
     private String recommendation;
 
-    @OneToOne
-    private Candidate candidate;
+    private int candidateId;
+
+//    @OneToOne
+//    private Candidate candidate;
 }

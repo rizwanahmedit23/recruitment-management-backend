@@ -1,5 +1,6 @@
 package com.manage.spring_crud.services;
 
+import com.manage.spring_crud.model.InterviewFeedback1;
 import com.manage.spring_crud.model.InterviewFeedback2;
 import com.manage.spring_crud.repository.InterviewFeedback2Repository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,4 +42,9 @@ public class InterviewFeedback2Service {
     public List<InterviewFeedback2> getAllInterviewFeedback2() {
         return interviewFeedback2Repository.findAll();
     }
+
+    public InterviewFeedback2 getInterviewFeedbackByCandidateId(int candidateId) {
+        return interviewFeedback2Repository.findByCandidateId(candidateId);
+    }
+
 }

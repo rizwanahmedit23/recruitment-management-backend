@@ -40,6 +40,9 @@ public class InterviewFeedback1Service {
 
     public List<InterviewFeedback1> getAllInterviewFeedback1() {
         return interviewFeedback1Repository.findAll();
+    }
 
+    public InterviewFeedback1 getInterviewFeedbackByCandidateId(int candidateId) {
+        return interviewFeedback1Repository.findByCandidateId(candidateId);
     }
 }

@@ -16,16 +16,24 @@ public class InterviewFeedback1Controller {
     private InterviewFeedback1Service interviewFeedback1Service;
 
     //Add new Level1 Feedback
-    @PostMapping("/addInterviewFeedback1")
-    public InterviewFeedback1 addInterviewFeedback1(@RequestBody InterviewFeedback1 interviewFeedback1) {
-        System.out.println("Add called");
-        return interviewFeedback1Service.addInterviewFeedback1(interviewFeedback1);
-    }
+//    @PostMapping("/addInterviewFeedback1")
+//    public InterviewFeedback1 addInterviewFeedback1(@RequestBody InterviewFeedback1 interviewFeedback1) {
+//        System.out.println("Add called");
+//        return interviewFeedback1Service.addInterviewFeedback1(interviewFeedback1);
+//    }
+//
+//    // Add more than 1 Level1 Feedback
+//    @PostMapping("/addInterviewFeedbacks1")
+//    public List<InterviewFeedback1> addAllInterviewFeedback1(@RequestBody List<InterviewFeedback1> interviewFeedback1s) {
+//        return interviewFeedback1Service.addAllInterviewFeedback1(interviewFeedback1s);
+//    }
 
-    // Add more than 1 Level1 Feedback
-    @PostMapping("/addInterviewFeedbacks1")
-    public List<InterviewFeedback1> addAllInterviewFeedback1(@RequestBody List<InterviewFeedback1> interviewFeedback1s) {
-        return interviewFeedback1Service.addAllInterviewFeedback1(interviewFeedback1s);
+    @PostMapping("/addInterviewFeedback1ByCandidateID/{id}")
+    public InterviewFeedback1 addInterviewFeedback1ByCandidateId(@PathVariable int candidateId,@RequestBody InterviewFeedback1 interviewFeedback1) {
+        // Set the candidate id for the interview feedback
+        interviewFeedback1.setCandidateId(candidateId);
+        // Save the interview feedback
+        return interviewFeedback1Service.addInterviewFeedback1(interviewFeedback1);
     }
 
     //Get Feedback1 details by Id
@@ -33,6 +41,13 @@ public class InterviewFeedback1Controller {
     public InterviewFeedback1 getInterviewFeedback1ById(@PathVariable int id) {
         return interviewFeedback1Service.getInterviewFeedback1ByID(id);
     }
+
+    //Get Feedback1 details by CandidateId
+    @GetMapping("/getInterviewFeedback1ByCandidateID/{id}")
+    public InterviewFeedback1 getInterviewFeedback1ByCandidateId(@PathVariable int candidateId) {
+        return interviewFeedback1Service.getInterviewFeedbackByCandidateId(candidateId);
+    }
+
 
 
     // Update Candidate

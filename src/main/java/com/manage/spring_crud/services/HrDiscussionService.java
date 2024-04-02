@@ -1,6 +1,7 @@
 package com.manage.spring_crud.services;
 
 import com.manage.spring_crud.model.HrDiscussion;
+import com.manage.spring_crud.model.InterviewFeedback1;
 import com.manage.spring_crud.repository.HrDiscussionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,5 +42,9 @@ public class HrDiscussionService {
     public List<HrDiscussion> getAllHrDiscussions() {
         return hrDiscussionRepository.findAll();
 
+    }
+
+    public HrDiscussion getHrDiscussionByCandidateID(int candidateId) {
+        return hrDiscussionRepository.findByCandidateId(candidateId);
     }
 }

@@ -59,4 +59,9 @@ public class CandidateService {
     public List<Candidate> getAllCandidates() {
         return candidateRepository.findAll();
     }
+
+    public List<Candidate> getAllCandidatesByJobId(Long jobId) {
+        // Assuming you have a method to retrieve candidates by job id in your repository
+        return candidateRepository.findByJobId(jobId);
+    }
 }
